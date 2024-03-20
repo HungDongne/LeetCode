@@ -9,27 +9,34 @@ public:
         cin.tie(0);
         cout.tie(0);
     }
-    int test(vector<int>& gas, vector<int>& cost, int start) {
-        int n = gas.size();
-        int tank = 0;
-        for (int i = 0; i < n; ++i) {
-            int j = (start + i) % n;
-            tank += gas[j] - cost[j];
-            if (tank < 0) {
-                return j;
-            }
-        }
-        return -1;
-    }
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        int i = 0;
-        while (i < gas.size()) {
-            int j = test(gas, cost, i);
-            if (j == -1) {
-                return i;
+        int length = gas.size();
+        int gasAvailable = 0;
+        int gasUsed = 0;
+        int paid = 0;
+        int startingPoint = 0;
+        for (int i=0; i<length; ++i) {
+            gasUsed += gas[i];
+            paid += cost[i];
+            gasAvailable += gas[i] - cost[i];
+            if (gasAvailable < 0) {
+                gasAvailable = 0;
+                startingPoint = i + 1;
             }
-            i = j + 1;
         }
-        return -1;
+        return paid > gasUsed ? -1 : startingPoint;
     }
 };
+
+int
+main()
+{
+    Solution solution;
+    vector<int> gas = {1, 2, 3, 4, 5};
+    vector<int> cost = {3, 4, 5, 1, 2};
+    cout << solution.canCompleteCircuit(gas, cost) << endl;
+    gas = {2, 3, 4};
+    cost = {3, 4, 3};
+    cout << solution.canCompleteCircuit(gas, cost) << endl;
+    return 0;
+}
