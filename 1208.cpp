@@ -10,16 +10,14 @@ public:
         cout.tie(nullptr);
     }
     int equalSubstring(string s, string t, int maxCost) {
-        vector<int> costs(s.length());
-        for (int i = 0; i < s.length(); ++i) {
-            costs[i] = abs(s[i] - t[i]);
-        }
         int res = 0, left = 0, right = 0;
         while (right < s.length()) {
-            maxCost -= costs[right++];
+            maxCost -= abs(s[right] - t[right]);
+            right++;
             if (maxCost < 0) {
                 while (maxCost < 0) {
-                    maxCost += costs[left++];
+                    maxCost += abs(s[left] - t[left]);
+                    left++;
                 }
             }
             res = max(res, right - left);
