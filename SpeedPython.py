@@ -8,7 +8,3 @@ def write_runtime_file():
         f.write("0\n")
 
 atexit.register(write_runtime_file)
-
-class Solution(object):
-    def abc(self):
-        return 0
