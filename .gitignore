@@ -2,3 +2,8 @@
 *.cph
 *.vscode
 *.vscode-test
+BinaryTree.cpp
+ListNode.cpp
+SpeedPython.py
+SpeedCpp.cpp
+UnionFind.cpp
