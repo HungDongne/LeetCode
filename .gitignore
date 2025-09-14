@@ -7,3 +7,5 @@ ListNode.cpp
 SpeedPython.py
 SpeedCpp.cpp
 UnionFind.cpp
+update_readme.bat
+update_readme.py
