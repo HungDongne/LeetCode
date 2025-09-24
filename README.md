@@ -1,15 +1,15 @@
 # 🧩 LeetCode Solutions
 
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Profile-orange?style=flat-square&logo=leetcode)](https://leetcode.com/u/HungDongne/)
-[![Solutions](https://img.shields.io/badge/Solutions-148-brightgreen?style=flat-square)]()
+[![Solutions](https://img.shields.io/badge/Solutions-149-brightgreen?style=flat-square)]()
 [![Languages](https://img.shields.io/badge/Languages-Python%20%7C%20C%2B%2B-blue?style=flat-square)]()
 
 This repository contains my solutions to LeetCode problems, implemented in **Python** and **C++**. Each solution is optimized for readability and efficiency.
 
 ## 📊 Statistics
 
-- **Total Solutions**: 148
-- **Python Solutions**: 59
+- **Total Solutions**: 149
+- **Python Solutions**: 60
 - **C++ Solutions**: 89
 - **LeetCode Profile**: [HungDongne](https://leetcode.com/u/HungDongne/)
 
